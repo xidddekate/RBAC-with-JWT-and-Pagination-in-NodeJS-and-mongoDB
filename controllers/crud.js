@@ -63,7 +63,7 @@ exports.updatePost= async (req, res) => {
 
 exports.deletePost= async (req, res) => {
 	Post.deleteOne({_id: req.params.id}).then(() => {
-		res.send('{"msg":"post deleted"}')
+		res.json({"msg":"post deleted"})
 	}).catch((err) => {
 		res.send(err)
 	})
