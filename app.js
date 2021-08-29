@@ -43,7 +43,7 @@ app.use((req, res, next) => {
 
 app.use('/api/auth', auth);
 app.use('*', function(req, res){
-  res.status(404).send("{\"error\" : \"Please check the URL.The endpoint doesn't exist\"}");
+  res.status(404).json({error: "Please check the URL.The endpoint doesn't exist"});
 });
 
 const port = process.env.PORT || 4000;
