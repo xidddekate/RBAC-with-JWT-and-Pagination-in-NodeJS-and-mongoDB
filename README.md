@@ -25,9 +25,9 @@ Rest all other CRUD endpoints can only be accessed via proving that a user is au
  * Normal User is allowed only to retrieve the Posts in MongoDB in paginated way (if they wish to), so as to handle huge no. of posts.
  * Admin can perform all CRUD operations on Posts document in mongoDB.
 When server is started Admin user is created by default if User collection is empty. Credentials for Admin user is as follows 
-* Name : ```admin```
-* email : ```admin@admin.com```
-* password : ```admin```
+    * Name : ```admin```
+    * email : ```admin@admin.com```
+    * password : ```admin```
 
 # Folder overview
 [validator](https://github.com/xidddekate/CRUD-APIs-in-NodeJS/tree/main/validator) : Has all necessary logic to validate the User Model fields.<br/>
