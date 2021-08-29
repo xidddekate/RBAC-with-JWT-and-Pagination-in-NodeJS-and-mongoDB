@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "1502d250-3979-4508-817c-4c4292a26e48",
+		"name": "AttainU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@admin.com\",\n    \"password\" : \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Thorr\",\n    \"email\":\"thor@gmail.com\",\n    \"password\" : \"thorr\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPosts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJiNjE3NzBiOTNmOTUxYzRjNDViMGQiLCJyb2xlIjp7ImlzQWRtaW4iOmZhbHNlfSwiaWF0IjoxNjMwMjMzMDE4fQ.y0o8pP3zq3d3oZ6SF_fLgdsfWe-W6n_Jv1M_QMhGyV8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/auth/crud?page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"crud"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPosts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJiNmFhYzUxZDFlMDBhZTFmY2Q4NGEiLCJyb2xlIjp7ImlzQWRtaW4iOnRydWV9LCJpYXQiOjE2MzAyMzUzMjd9.B3uvRG0GiLnBr6uB5_woW4diTL5D2vbe8m0Ify4Vb9s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subject\": \"Something 3\",\n    \"description\": \"Something\",\n    \"author\" : \"thor\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/crud",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"crud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePosts",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJiNjYxMjFiNzI1N2NkZTQ5ZGVjZTIiLCJyb2xlIjp7ImlzQWRtaW4iOnRydWV9LCJpYXQiOjE2MzAyMzQxNTF9.SjVWTurUil3DKxJLkmzyVKy4i0Qf9-abD1scc2vDHIk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subject\": \"Something\",\n    \"description\": \"Something 3\",\n    \"author\" : \"thor\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/crud/612b66ab33e6e874c181632d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"crud",
+						"612b66ab33e6e874c181632d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePosts",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJiNjYxMjFiNzI1N2NkZTQ5ZGVjZTIiLCJyb2xlIjp7ImlzQWRtaW4iOnRydWV9LCJpYXQiOjE2MzAyMzQxNTF9.SjVWTurUil3DKxJLkmzyVKy4i0Qf9-abD1scc2vDHIk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/crud/612b66ab33e6e874c181632d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"crud",
+						"612b66ab33e6e874c181632d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
