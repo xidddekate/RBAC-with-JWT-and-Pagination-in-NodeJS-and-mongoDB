@@ -40,7 +40,7 @@ exports.addPost = async (req, res) => {
 	newPost.save().then((post) => {
 		res.send(post)
 	}).catch((err) => {
-		console.log(error)
+		res.send(err)
 	})
 }
 
@@ -56,7 +56,7 @@ exports.updatePost= async (req, res) => {
 	Post.updateOne({_id: req.params.id}, post).then(() => {
 		res.send(post)
 	}).catch((err) => {
-		console.log(error)
+		res.send(err)
 	})
 }
 
@@ -65,6 +65,6 @@ exports.deletePost= async (req, res) => {
 	Post.deleteOne({_id: req.params.id}).then(() => {
 		res.send('{"msg":"post deleted"}')
 	}).catch((err) => {
-		console.log(error)
+		res.send(err)
 	})
 }
