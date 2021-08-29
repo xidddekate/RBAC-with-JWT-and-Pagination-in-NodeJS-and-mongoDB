@@ -3,7 +3,6 @@ const router = express.Router();
 bodyParser = require('body-parser').json();
 const mongoose = require('mongoose');
 
-// if( !mongoose.Types.ObjectId.isValid(id) ) return false;
 const authController = require('../controllers/auth');
 const CRUDController = require('../controllers/crud');
 
