@@ -1,4 +1,4 @@
-# CRUD-APIs-in-NodeJS
+# RBAC-with-JWT-and-Pagination-in-NodeJS-and-mongoDB
 CRUD APIs to demonstrate RBAC (role based access control) implemented with JWT and pagination in Node.js and using MongoDB
 
 # Overview
